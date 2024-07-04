@@ -1,13 +1,19 @@
 import { useState } from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox';
-import { DateRange } from 'react-date-range';
-// import ReactModal from 'react-modal';
-// import LoginSignup from './components/LoginSignup/LoginSignup';
-// import Daterange from './components/filters/daterange';
+import Daterange from './components/daterange/daterange';
+import ReactModal from 'react-modal';
 
 const App=()=> {
     const[visible,setVisible]=useState(false)
+
+    const handleSearch = () => {
+        alert(`Filter Applied`);
+      };
+
+      const handleChange = () => {
+        alert(`Date Applied`);
+      };
   return (
    <>
     <div id="header">
@@ -36,15 +42,28 @@ const App=()=> {
               <SearchBox/>
           </div> 
           <div class="filter-section">
-              <label>Date</label>
-                <DateRange/>
+          <button onClick={()=>setVisible(true)}>Date</button>
+            <ReactModal isOpen={visible} onRequestClose={()=>setVisible(false)} style={{
+                overlay:{
+                    background:"transparent",
+                    alignItems:"center",
+                    justifyContent:"center"
+                },
+                content:{
+                    width:"50%",
+                    height:"442px"
+                }
+            }}>
+                <Daterange/>
+                <button onClick={handleChange}>Apply</button>
+            </ReactModal> 
           </div>
           <div class="filter-section">
               <label>Client Id</label>
               <label><input type="checkbox" id="savingDomain"/> Saving Domain</label>
               <label><input type="checkbox" id="insuranceDomain"/> Insurance Domain</label>
           </div>
-          <button>Apply</button>
+          <button onClick={handleSearch}>Apply</button>
         </div>
       </div>
       <div id="right-main">
@@ -109,18 +128,15 @@ const App=()=> {
           </div>
           <div id="h-bar"></div>
           <div id="right-main-footer">
-            <div>
-              <button>Previous</button>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
-              <button>Next</button>
-          </div>
-          <div>
-              <button>Download</button>
-          </div>
+                <div>
+                    <button>Previous</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>Next</button>
+                </div>
           </div>
       </div>
     </div>

@@ -17,7 +17,7 @@
           type="text"
           value={query}
           onChange={handleInputChange}
-          style={{ padding: '4px', fontSize: '16px', width: '232px' }}
+          style={{ padding: '4px', fontSize: '16px', width: '232px', marginBottom: '5px' }}
         />
         <button
           onClick={handleSearch}

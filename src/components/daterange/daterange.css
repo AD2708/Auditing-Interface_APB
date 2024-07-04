@@ -1,0 +1,26 @@
+.Container{
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0;
+  width:50%;
+}
+
+.calender-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.calender{
+  padding: 20px;
+  border: 2px solid gray;
+  cursor: pointer;
+}
+
+@media screen and (min-width : 310px) {
+  .Container{
+    width:100%;
+  }
+}
