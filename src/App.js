@@ -2,21 +2,19 @@ import { useState } from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox';
 import Daterange from './components/daterange/daterange';
-import ReactModal from 'react-modal';
+import APB from '../src/components/assets/APB.avif';
+import Dropdown from './components/dropdown/dropdown';
 
 const App=()=> {
-    const[visible,setVisible]=useState(false)
 
     const handleSearch = () => {
         alert(`Filter Applied`);
       };
 
-      const handleChange = () => {
-        alert(`Date Applied`);
-      };
   return (
    <>
     <div id="header">
+    <img src={APB}></img>
         <div>
             {/* <button onClick={()=>setVisible(true)}>Login</button>
             <ReactModal isOpen={visible} onRequestClose={()=>setVisible(false)} style={{
@@ -37,43 +35,29 @@ const App=()=> {
     <div>
     <div id="main-content">
       <div id="leftbar-main">
-        <div class="sidebar">
-        <div class="filter-section">
+        <div className="sidebar">
+        <div className="filter-section">
+              <Dropdown/>
+          </div>      
+        <div className="filter-section">
               <SearchBox/>
           </div> 
-          <div class="filter-section">
-          <button onClick={()=>setVisible(true)}>Date</button>
-            <ReactModal isOpen={visible} onRequestClose={()=>setVisible(false)} style={{
-                overlay:{
-                    background:"transparent",
-                    alignItems:"center",
-                    justifyContent:"center"
-                },
-                content:{
-                    width:"50%",
-                    height:"442px"
-                }
-            }}>
-                <Daterange/>
-                <button onClick={handleChange}>Apply</button>
-            </ReactModal> 
+          <div className="filter-section">
           </div>
-          <div class="filter-section">
+          <div className="filter-section">
               <label>Client Id</label>
               <label><input type="checkbox" id="savingDomain"/> Saving Domain</label>
               <label><input type="checkbox" id="insuranceDomain"/> Insurance Domain</label>
           </div>
-          <button onClick={handleSearch}>Apply</button>
+          <button style={{padding:"5px",borderRadius:"0.5rem"}} onClick={handleSearch}>Apply</button>
         </div>
       </div>
       <div id="right-main">
           <div id="right-main-header">
-            <div class="buttons">
-              <div>
+            <div className="buttons">
                   <button>Sort</button>
                   <button>Asc/Desc</button>
-              </div>
-          </div>
+            </div>
           </div>
           <div id="h-bar"></div>
           <div id="right-main-content">
@@ -128,7 +112,7 @@ const App=()=> {
           </div>
           <div id="h-bar"></div>
           <div id="right-main-footer">
-                <div>
+                <div className='footer-buttons'>
                     <button>Previous</button>
                     <button>1</button>
                     <button>2</button>
