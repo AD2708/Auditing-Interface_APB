@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import  React from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox';
-import Daterange from './components/daterange/daterange';
+// import Daterange from './components/daterange/daterange';
 import APB from '../src/components/assets/APB.avif';
 import Dropdown from './components/dropdown/dropdown';
 
@@ -14,7 +14,7 @@ const App=()=> {
   return (
    <>
     <div id="header">
-    <img src={APB}></img>
+    <img src={APB} alt='img'></img>
         <div>
             {/* <button onClick={()=>setVisible(true)}>Login</button>
             <ReactModal isOpen={visible} onRequestClose={()=>setVisible(false)} style={{
@@ -35,14 +35,15 @@ const App=()=> {
     <div>
     <div id="main-content">
       <div id="leftbar-main">
-        <div className="sidebar">
+        <div className="sidebar">     
         <div className="filter-section">
               <Dropdown/>
-          </div>      
-        <div className="filter-section">
+          </div> 
+          <div className="filter-section">
               <SearchBox/>
           </div> 
           <div className="filter-section">
+            {/* <Daterange/> */}
           </div>
           <div className="filter-section">
               <label>Client Id</label>

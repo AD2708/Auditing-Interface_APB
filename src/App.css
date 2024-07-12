@@ -26,6 +26,14 @@ height: 100%;
 display: inline-block;
 margin-left: 20px;
 }
+#right-main-header .buttons button {
+  transition: transform 0.3s ease;
+}
+
+#right-main-header .buttons button:hover {
+  transform: scale(1.2);
+}
+
 .sidebar {
   width: 95%;
   padding: 10px;
@@ -47,6 +55,15 @@ margin-left: 20px;
   padding: 5px;
   margin-top: 10px;
 }
+/* .filter-section .dropdown {
+  background-color: #031f3b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
 .buttons {
       display: flex;
       gap: 10px;
@@ -136,9 +153,83 @@ justify-content: end;
   cursor: pointer;
 }
 
-.footer-buttons button:hover{
+/* .footer-buttons button:hover{
   opacity: 1;
+} */
+#right-main-header .buttons button,
+#right-main-footer .footer-buttons button {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    background-color: initial;
+    color: initial; 
 }
+
+#right-main-header .buttons button:hover,
+#right-main-footer .footer-buttons button:hover {
+    transform: scale(1.2);
+    background-color: #3498db; 
+    color: #ffffff; 
+}
+.filter-section .dropdown {
+  background-color: #00695c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter-section .dropdown:hover {
+  background-color: #00796b;
+}
+button {
+  padding: 5px;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  background-color: #007bff; 
+  color: #ffffff; 
+  border: 2px solid #007bff; 
+}
+
+button:hover {
+  transform: scale(1.2) rotate(3deg);
+  background-color: #0056b3; 
+  color: #ffffff; 
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+  border-color: #0056b3; 
+}
+#right-main-content th {
+  background-color: #f2f2f2;
+}
+
+#right-main-content tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#right-main-content tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer Styles */
+#right-main-footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.footer-buttons button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.footer-buttons button:hover {
+  background-color: #45a049;
+}
+
+
 #h-bar{
   display: block;
   width: 100%;
@@ -163,4 +254,16 @@ justify-content: end;
   object-fit: contain;
   z-index: -1;
   top: -20px;
+}
+#right-main-content th {
+  background-color: #004d40; /* Dark teal background color */
+  color: white;
+}
+
+#right-main-content tr:nth-child(even) {
+  background-color: #e0f2f1; /* Light teal background color */
+}
+
+#right-main-content tr:hover {
+  background-color: #b2dfdb; /* Lighter teal background color */
 }
