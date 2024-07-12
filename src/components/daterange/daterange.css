@@ -12,13 +12,15 @@
 .date-picker-placeholder {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px;
-  border: 2px solid #FFD700;
-  border-radius: 5px;
+  justify-content: left;
+  gap: 20px;
+  padding: 6px;
+  border: 2px solid #afaea4;
+  border-radius: 9px;
   cursor: pointer;
   background-color: white;
+  width: 231px;
+  margin-left: -20px;
 }
 
 .date-picker-placeholder img {
@@ -27,7 +29,7 @@
 }
 
 .date-picker-placeholder span {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .react-datepicker {

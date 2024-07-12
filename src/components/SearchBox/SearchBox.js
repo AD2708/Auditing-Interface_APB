@@ -18,7 +18,7 @@ return (
         placeholder='search'
         value={query}
         onChange={handleInputChange}
-        style={{ padding: '4px', fontSize: '16px', width: '232px', marginBottom: '5px', borderRadius:"0.5rem" }}
+        style={{ padding: '6px', fontSize: '14px', width: '232px', marginBottom: '5px', borderRadius:"0.5rem" }}
       />
       <button
         onClick={handleSearch}

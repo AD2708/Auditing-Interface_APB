@@ -1,7 +1,7 @@
-import  React from 'react';
+import  React, { useEffect } from 'react';
 import './App.css';
 import SearchBox from './components/SearchBox/SearchBox';
-// import Daterange from './components/daterange/daterange';
+import Daterange from './components/daterange/daterange';
 import APB from '../src/components/assets/APB.avif';
 import Dropdown from './components/dropdown/dropdown';
 
@@ -43,7 +43,7 @@ const App=()=> {
               <SearchBox/>
           </div> 
           <div className="filter-section">
-            {/* <Daterange/> */}
+            <Daterange/>
           </div>
           <div className="filter-section">
               <label>Client Id</label>

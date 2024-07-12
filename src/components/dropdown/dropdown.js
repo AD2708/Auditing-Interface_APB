@@ -15,7 +15,7 @@ const Dropdown = () => {
         <option value="PAN Service">PAN Service</option>
         <option value="Aadhar-OTP Service">Aadhar-OTP Service</option>
       </select>
-      {/* <p id='content'>{selectedService}</p> */}
+      <p id='content' style={{display:'none'}}>{selectedService}</p>
     </div>
   );
 };
